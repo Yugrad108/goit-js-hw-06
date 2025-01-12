@@ -1,35 +1,29 @@
 class StringBuilder {
-    // Приватное свойство value
   #value;
-    // Конструктор принимает начальное значение строки
+  
   constructor(initialValue) {
-    this.#value = initialValue; // Приватное свойство для хранения строки
+    this.#value = initialValue; 
   }
 
-  // Метод для получения текущего значения
   getValue() {
-    return this.#value; // Возвращаем текущее значение приватного свойства
+    return this.#value; 
   }
-
-  // Метод для добавления строки в конец
+  
   padEnd(str) {
-    this.#value += str; // Добавляем строку в конец текущего значения через оператор +=
-    this.#value = this.#value + str; // Добавляем строку в конец текущего значения более гибче если потом надо будет добавлять еще что-то.
+    // this.#value += str;
+    this.#value = this.#value + str; 
   }
-
-  // Метод для добавления строки в начало
+ 
   padStart(str) {
-    this.#value = str + this.#value; // Добавляем строку в начало текущего значения
+    this.#value = str + this.#value; 
   }
-
-  // Метод для добавления строки с обеих сторон
+  
   padBoth(str) {
-    this.padStart(str); // Сначала добавляем строку в начало
-    this.padEnd(str);   // Затем добавляем строку в конец
+    this.padStart(str); 
+    this.padEnd(str);   
   }
 }
 
-// Код для проверки работы класса
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
 
@@ -41,3 +35,4 @@ console.log(builder.getValue()); // "^.^"
 
 builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
+

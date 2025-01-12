@@ -1,7 +1,7 @@
 class Storage {
-  #items;// Объявление приватного поля
+  #items;
   constructor(items) {
-    this.#items = items; // Инициализация в конструкторе
+    this.#items = items; 
   }
 
   getItems() {

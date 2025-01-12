@@ -10,21 +10,13 @@ const customer = {
   getDiscount() {
     return this.discount;
   },
-    setDiscount(value) {
-    // захист від невалідного значення
-    //   if (value < 0 || value > 1) {
-    // throw new Error('Discount must be between 0 and 1');
-  }
+  setDiscount(value) {
     this.discount = value;
   },
   getOrders() {
     return this.orders;
   },
-    addOrder(cost, order) {
-    // захист від невалідного значення
-    //   if (cost < 0) {
-    // throw new Error('Cost must be a positive number');
-  }
+  addOrder(cost, order) {
     this.balance -= cost - cost * this.discount;
     this.orders.push(order);
   },
